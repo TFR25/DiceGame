@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dicee</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Welcome to the Dicee Game</h1>
+      </div>
+      <div class="result">
+        <h3>Rules: Press die 1 button. Then, press die 2 button. Player with the higher roll wins.</h3>
+      </div>
+
+      <div class="dice-btn1">
+        <div id="die1btn"><button type="button" onclick="rollDie1(); playSound()">Roll Die 1</button></div>
+      </div>
+      <div class="dice-img1">
+        <img id="die1" src="./images/dice1.png" />
+      </div>
+
+      <div class="dice-btn2">
+        <div id="die2btn">
+          <button type="button" onclick="rollDie2(); playSound(); playGame()">Roll Die 2</button>
+        </div>
+      </div>
+      <div class="dice-img2">
+        <img id="die2" src="./images/dice2.png" />
+      </div>
+      <div class="footer" id="copyright"></div>
+    </div>
+    <script src="index.js" type="text/javascript"></script>
+  </body>
+</html>

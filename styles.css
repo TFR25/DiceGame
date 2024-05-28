@@ -1,0 +1,129 @@
+/*micro resetting*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #3b3b3b;
+  background-color: #cbeef3;
+  text-align: center;
+  font-size: 1.5rem;
+  min-height: 100vh;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  padding: 6px;
+  font-family: "Lobster", cursive;
+  text-shadow: 1px 0 #232931;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+  padding: 20px;
+  font-family: "Indie Flower", cursive;
+  text-shadow: 1px 0 #232931;
+  text-align: center;
+}
+
+img {
+  background-color: #780101;
+  border-radius: 30px;
+  /*offset-x | offset-y | blur-radius | color*/
+  /* box-shadow: 20px 20px 80px #100101; */
+  max-width: 200px;
+  max-height: 200px;
+}
+
+button {
+  display: inline-block;
+  text-align: center;
+  font-family: "Indie Flower", cursive;
+  font-size: 26px;
+  cursor: pointer;
+  background-color: #FBF6EB;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px #000;
+  margin: 18px auto;
+  padding: 8px;
+}
+
+.rolling {
+  animation: roll-animation 1s infinite;
+}
+@keyframes roll-animation {
+  0% { transform: rotate(0deg); }
+  16.6% { transform: rotate(60deg); }
+  33.3% { transform: rotate(120deg); }
+  50% { transform: rotate(180deg); }
+  66.6% { transform: rotate(240deg); }
+  83.3% { transform: rotate(300deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media(min-width: 750px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "header header"
+      "result result"
+      "image1 image2"
+      "button1 button2"
+      "footer footer";
+    max-width: 991.98px;
+    box-shadow: 10px 10px 100px #100101;
+    padding: 8px;
+    min-height: 100vh;
+    margin: auto;
+    width: 80%;
+  }
+  .header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .result {
+    grid-area: result;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .dice-img1 {
+    grid-area: image1;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .dice-btn1 {
+    grid-area: button1;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .dice-img2 {
+    grid-area: image2;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .dice-btn2 {
+    grid-area: button2;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
